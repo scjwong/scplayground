@@ -26,7 +26,7 @@ func helloWorld(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", helloWorld)
-	err := http.ListenAndServe("localhost:8080", nil)
+	err := http.ListenAndServe("0.0.0.0:8080", nil)
 	if err != nil {
 		log.Fatal("error starting http server: ", err)
 		return
